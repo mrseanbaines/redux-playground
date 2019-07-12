@@ -9,7 +9,7 @@ const initialState = {
 
 export default (state = initialState, { type, todos }) => {
   switch (type) {
-    case actionTypes.todos.ADD_TODO_REQUEST: {
+    case actionTypes.todos.GET_TODOS_REQUEST: {
       return {
         ...state,
         loading: true,
@@ -18,7 +18,7 @@ export default (state = initialState, { type, todos }) => {
       };
     }
 
-    case actionTypes.todos.ADD_TODO_SUCCESS: {
+    case actionTypes.todos.GET_TODOS_SUCCESS: {
       return {
         ...state,
         loading: false,
@@ -28,7 +28,7 @@ export default (state = initialState, { type, todos }) => {
       };
     }
 
-    case actionTypes.todos.ADD_TODO_FAILURE: {
+    case actionTypes.todos.GET_TODOS_FAILURE: {
       return {
         ...state,
         loading: false,

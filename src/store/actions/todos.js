@@ -1,27 +1,27 @@
 import actionTypes from '../action-types';
 
-const addTodoRequest = () => ({
-  type: actionTypes.todos.ADD_TODO_REQUEST,
+const getTodosRequest = () => ({
+  type: actionTypes.todos.GET_TODOS_REQUEST,
 });
 
-const addTodoSuccess = todos => ({
-  type: actionTypes.todos.ADD_TODO_SUCCESS,
+const getTodosSuccess = todos => ({
+  type: actionTypes.todos.GET_TODOS_SUCCESS,
   todos,
 });
 
-const addTodoFailure = () => ({
-  type: actionTypes.todos.ADD_TODO_FAILURE,
+const getTodosFailure = () => ({
+  type: actionTypes.todos.GET_TODOS_FAILURE,
 });
 
 const getTodos = () => async dispatch => {
   try {
-    dispatch(addTodoRequest());
+    dispatch(getTodosRequest());
     const response = await fetch('https://jsonplaceholder.typicode.com/todos');
     const json = await response.json();
-    dispatch(addTodoSuccess(json));
+    dispatch(getTodosSuccess(json));
     return json;
   } catch (error) {
-    dispatch(addTodoFailure());
+    dispatch(getTodosFailure());
     console.error(error);
   }
 };
