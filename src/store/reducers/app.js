@@ -6,7 +6,7 @@ const initialState = {
 
 export default (state = initialState, { type }) => {
   switch (type) {
-    case actionTypes.app.INCREMENT_COUNTER: {
+    case actionTypes.app.counter.increment: {
       return {
         ...state,
         count: state.count + 1,

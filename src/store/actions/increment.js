@@ -1,7 +1,7 @@
 import actionTypes from '../action-types';
 
 const increment = () => ({
-  type: actionTypes.app.INCREMENT_COUNTER,
+  type: actionTypes.app.counter.increment,
 });
 
 const incrementAsync = () => dispatch => {

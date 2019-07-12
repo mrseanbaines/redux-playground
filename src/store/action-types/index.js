@@ -1,11 +1,15 @@
 const app = {
-  INCREMENT_COUNTER: 'INCREMENT_COUNTER',
+  counter: {
+    increment: 'INCREMENT_COUNTER',
+  },
 };
 
 const todos = {
-  GET_TODOS_REQUEST: 'GET_TODOS_REQUEST',
-  GET_TODOS_SUCCESS: 'GET_TODOS_SUCCESS',
-  GET_TODOS_FAILURE: 'GET_TODOS_FAILURE',
+  get: {
+    request: 'GET_TODOS_REQUEST',
+    success: 'GET_TODOS_SUCCESS',
+    failure: 'GET_TODOS_FAILURE',
+  },
 };
 
 export default {

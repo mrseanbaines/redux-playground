@@ -1,16 +1,16 @@
 import actionTypes from '../action-types';
 
 const getTodosRequest = () => ({
-  type: actionTypes.todos.GET_TODOS_REQUEST,
+  type: actionTypes.todos.get.request,
 });
 
 const getTodosSuccess = todos => ({
-  type: actionTypes.todos.GET_TODOS_SUCCESS,
+  type: actionTypes.todos.get.success,
   todos,
 });
 
 const getTodosFailure = () => ({
-  type: actionTypes.todos.GET_TODOS_FAILURE,
+  type: actionTypes.todos.get.failure,
 });
 
 const getTodos = () => async dispatch => {
